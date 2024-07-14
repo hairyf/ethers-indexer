@@ -1,0 +1,59 @@
+{
+  "name": "ethers-indexer",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.4.0",
+  "description": "_description_",
+  "author": "Hairyf <wwu710632@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hairyf/ethers-indexer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hairyf/ethers-indexer.git"
+  },
+  "bugs": "https://github.com/hairyf/ethers-indexer/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "browser": {
+    "./dist/index.mjs": "./dist/index.browser.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "cron": "3.1.7",
+    "ethers": "^6.13.1",
+    "unstorage": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}
