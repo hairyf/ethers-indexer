@@ -15,7 +15,8 @@
   "keywords": [],
   "sideEffects": false,
   "browser": {
-    "./dist/index.mjs": "./dist/index.browser.mjs"
+    "./dist/index.mjs": "./dist/index.browser.mjs",
+    "./dist/index.cjs": "./dist/index.browser.cjs"
   },
   "exports": {
     ".": {
